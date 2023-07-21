@@ -6,12 +6,15 @@ const {
   updateMobileById,
   deleteMobile,
 } = require("../controllers/mobile_controller.js");
+
+const { isAuth } = require('../middlewares/auth.js');
+
 const router = express.Router();
 
 router.get("/", getAllMobiles);
 router.get("/:id", getMobileById);
-router.post("/", createMobile);
-router.put("/:id", updateMobileById);
-router.delete("/:id", deleteMobile);
+router.post("/", [isAuth], createMobile);
+router.put("/:id", [isAuth], updateMobileById);
+router.delete("/:id", [isAuth], deleteMobile);
 
 module.exports = router;

@@ -7,12 +7,14 @@ const {
   deleteManufacturer,
 } = require("../controllers/manufacturer_controller.js");
 
+const { isAuth } = require('../middlewares/auth.js');
+
 const router = express.Router();
 
 router.get("/", getAllManufacturers);
 router.get("/:id", getManufacturerById);
-router.post("/", createManufacturer);
-router.put("/:id", updateManufacturerById);
-router.delete("/:id", deleteManufacturer);
+router.post("/",[isAuth], createManufacturer);
+router.put("/:id",[isAuth], updateManufacturerById);
+router.delete("/:id",[isAuth], deleteManufacturer);
 
 module.exports = router;

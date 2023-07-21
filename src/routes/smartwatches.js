@@ -7,12 +7,14 @@ const {
   deleteSmartwatch,
 } = require("../controllers/smartwatch_controller.js");
 
+const { isAuth } = require('../middlewares/auth.js');
+
 const router = express.Router();
 
 router.get("/", getAllSmartwatches);
 router.get("/:id", getSmartwatchById);
-router.post("/", createSmartwatch);
-router.put("/:id", updateSmartwatchById);
-router.delete("/:id", deleteSmartwatch);
+router.post("/",[isAuth], createSmartwatch);
+router.put("/:id", [isAuth], updateSmartwatchById);
+router.delete("/:id",[isAuth], deleteSmartwatch);
 
 module.exports = router;
