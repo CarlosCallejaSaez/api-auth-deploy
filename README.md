@@ -4,7 +4,7 @@
 | * (404) | /bad-path        | Return a 404 Error message                                         |
 
 
-### **_END POINTS MOBILES _**
+## **_END POINTS MOBILES _**
 
 | HTTP     | ENDPOINT                              |                                                                    |
 | -------- | ------------------------------------- | ------------------------------------------------------------------ |
@@ -12,10 +12,10 @@
 | GET      | /api/mobiles/:id | Get from DB mobile with the id choosen                             |
 | POST  (auth required)   | /api/mobiles     | Create a new mobile in DB with the body data                       |
 | PUT  (auth required)     | /api/mobiles/:id | Update the mobile in the DB with the id choosen with the body data |
-| DELETE  (auth required)  | /api/mobiles/:id | Delete from DB mobile with the id choosen                          |
+| DELETE  (auth required)  | /api/mobiles/:id | Delete from DB mobile with the id choosen                          
 
 
-### **_END POINTS MANUFACTURERS _**
+## **_END POINTS MANUFACTURERS _**
 
 | HTTP     | ENDPOINT                                    |                                                                          |
 | -------- | ------------------------------------------- | ------------------------------------------------------------------------ |
@@ -24,10 +24,10 @@
 | POST  (auth required)    | /api/manufacturers     | Create a new manufacturer in DB with the body data                       |
 | PUT      | /api/manufacturers/:id | Update the manufacturer in the DB with the id choosen with the body data |
 | DELETE (auth required)   | /api/manufacturers/:id | Delete from DB manufacturer with the id choosen                          |
-                                              |
+                                              
 
 
-### **_END POINTS SMARTWATCHES _**
+## **_END POINTS SMARTWATCHES _**
 
 | HTTP     | ENDPOINT                                    |                                                                          |
 | -------- | ------------------------------------------- | ------------------------------------------------------------------------ |
@@ -36,9 +36,9 @@
 | POST   (auth required)  | /api/smartwatches     | Create a new smartwatch in DB with the body data                        |
 | PUT     (auth required) | /api/smartwatches/:id | Update the smartwatch in the DB with the id choosen with the body data |
 | DELETE  (auth required) | /api/smartwatches/:id | Delete from DB smartwatch with the id choosen                          |
-                                              |
+                                              
 
-### **_END POINTS USERS _**
+## **_END POINTS USERS _**
 
 | HTTP  | ENDPOINT      |                           |
 |--------------|-----------------|---------------------------------------|
